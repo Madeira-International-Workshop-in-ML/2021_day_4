@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Example3</string>
+    <string name="infer">Infer</string>
+    <string name="Error">Ups! An error occurred</string>
+    <string name="generate">Generate</string>
+</resources>
