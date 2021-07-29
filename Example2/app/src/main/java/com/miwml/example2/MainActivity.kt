@@ -26,8 +26,7 @@ class MainActivity : AppCompatActivity() {
         binding.inferButton.setOnClickListener { inferCanvas() }
 
         // Create the digit classifier
-        digitClassifier = DigitClassifier(this)
-        digitClassifier.initialize()
+        //TODO
 
         // Capture elements form the UI
         resultText = binding.resultText

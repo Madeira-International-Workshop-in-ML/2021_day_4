@@ -46,16 +46,15 @@ class DigitClassifier(private val context: Context) {
      * on the passed bitmap
      */
     fun classify(bitmap: Bitmap): String {
-        val resizedImage = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, true)
-        val byteBuffer = convertBitmapToByteBuffer(resizedImage)
+        //TODO
 
         // Define an array to store the model output.
-        val output = Array(1) { FloatArray(OUTPUT_CLASSES_COUNT) }
+        //TODO
 
         // Run inference with the input data.
-        interpreter.run(byteBuffer, output)
+        //TODO
 
-        return getSortedResult(output)
+        //TODO
 
     }
 
@@ -87,9 +86,7 @@ class DigitClassifier(private val context: Context) {
      * Sorts the results and outputs the argmax
      */
     private fun getSortedResult(output: Array<FloatArray>): String {
-        val result = output[0]
-        val maxIndex = result.indices.maxByOrNull { result[it] } ?: -1
-        return "Prediction Result: %d\nConfidence: %.2f%%".format(maxIndex, result[maxIndex] * 100)
+        // TODO
     }
 
 
