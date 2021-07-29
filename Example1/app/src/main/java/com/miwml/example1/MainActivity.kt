@@ -44,13 +44,17 @@ class MainActivity : AppCompatActivity() {
      */
     private fun computeResult() {
         // Get the text from the text view and convert it to string
-        // TODO
+        val inputNumber = inputText.text.toString()
 
         // If no information was input, ignore
-        // TODO
+        if(inputNumber=="") {
+            resultText.text = ""
+            return
+        }
 
         // Otherwise, compute and show the result
-        // TODO
+        val result = infer(inputNumber).toString()
+        resultText.text = getString(R.string.result, result)
     }
 
     /**
@@ -58,13 +62,15 @@ class MainActivity : AppCompatActivity() {
      */
     private fun infer(inputString: String): Float {
         // Converts the string to JAVA FLOAT
-        // TODO
+        val inputVal = FloatArray(1)
+        inputVal[0] = java.lang.Float.valueOf(inputString)
 
         // Prepare the output
-        // TODO
+        val output = Array(1){FloatArray(1)}
 
         // Compute the inference
-        // TODO
+        interpreter.run(inputVal, output)
+        return output[0][0]
     }
 
     /**
