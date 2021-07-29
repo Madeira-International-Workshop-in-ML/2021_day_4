@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputText: EditText
     private lateinit var resultText: TextView
 
+    // TODO: import the SavedModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -44,33 +46,20 @@ class MainActivity : AppCompatActivity() {
      */
     private fun computeResult() {
         // Get the text from the text view and convert it to string
-        val inputNumber = inputText.text.toString()
+        // TODO
 
         // If no information was input, ignore
-        if (inputNumber == "") {
-            resultText.text = ""
-            return
-        }
+        // TODO
 
         // Otherwise, compute and show the result
-        val result = infer(inputNumber).toString()
-        resultText.text = getString(R.string.result, result)
+        // TODO
     }
 
     /**
      * This function computes the output of the network
      */
     private fun infer(inputString: String): Float {
-        // Converts the string to JAVA FLOAT
-        val inputVal = FloatArray(1)
-        inputVal[0] = java.lang.Float.valueOf(inputString)
-
-        // Prepare the output
-        val output = Array(1) { FloatArray(1) }
-
-        // Compute the inference
-        interpreter.run(inputVal, output)
-        return output[0][0]
+        // TODO
     }
 
     /**
