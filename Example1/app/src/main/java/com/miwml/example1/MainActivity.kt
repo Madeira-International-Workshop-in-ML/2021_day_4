@@ -19,8 +19,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputText: EditText
     private lateinit var resultText: TextView
 
-    // TODO: import the SavedModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -59,6 +57,13 @@ class MainActivity : AppCompatActivity() {
      * This function computes the output of the network
      */
     private fun infer(inputString: String): Float {
+        // Converts the string to JAVA FLOAT
+        // TODO
+
+        // Prepare the output
+        // TODO
+
+        // Compute the inference
         // TODO
     }
 
