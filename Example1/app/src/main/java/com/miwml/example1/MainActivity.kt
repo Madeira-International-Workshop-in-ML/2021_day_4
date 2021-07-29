@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputText: EditText
     private lateinit var resultText: TextView
 
+    // TODO: Import the model
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
