@@ -63,18 +63,17 @@ class CatDogClassifier(private val context: Context) {
      */
     fun classify(image: ImageProxy, rotation: Int): String {
         // Converts the image to bitmap and rotate
-        val bitmap = rotateBitmap(convertImageProxyToBitmap(image), rotation)
+        // TODO
 
-        val resizedImage = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, true)
-        val byteBuffer = convertBitmapToByteBuffer(resizedImage)
+        // TODO
 
         // Define an array to store the model output.
-        val output = Array(1) { FloatArray(OUTPUT_CLASSES_COUNT) }
+        // TODO
 
         // Run inference with the input data.
-        interpreter.run(byteBuffer, output)
+        // TODO
 
-        return getSortedResult(output)
+        // TODO
 
     }
 
@@ -144,19 +143,8 @@ class CatDogClassifier(private val context: Context) {
      */
     private fun getSortedResult(output: Array<FloatArray>): String {
 
-        val result = output[0]
-        val maxIndex = result.indices.maxByOrNull { result[it] } ?: -1
-        val confidence = result[maxIndex]
-        return if (confidence > THRESHOLD) {
-            val animal = when (maxIndex) {
-                0 -> "Cat"
-                1 -> "Dog"
-                else -> ""
-            }
-            "Prediction Result: %s\nConfidence: %.2f%%".format(animal, confidence * 100)
-        } else {
-            ""
-        }
+        // TODO
+
     }
 
 }

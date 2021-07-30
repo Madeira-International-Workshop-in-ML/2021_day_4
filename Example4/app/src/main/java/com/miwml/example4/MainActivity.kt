@@ -106,8 +106,7 @@ class MainActivity : AppCompatActivity() {
             imageAnalysis.setAnalyzer(cameraExecutor, { image ->
                 image.apply { }
                 image.imageInfo.rotationDegrees
-                inferImage(image)
-                image.close() // Release the frame
+                // TODO
             })
 
             // Select back camera as a default
