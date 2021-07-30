@@ -8,8 +8,6 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.miwml.example3.databinding.ActivityMainBinding
-import com.miwml.example3.network.ModelApi
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlin.random.Random
@@ -61,12 +59,7 @@ class MainActivity : AppCompatActivity() {
      * This function serves to call the REST API
      */
     private suspend fun getModelOutput(input: String) {
-        try {
-            val listResult = ModelApi.retrofitService.getModelOutput(input)
-            handleResponseSuccess(listResult.output)
-        } catch (e: Exception) {
-            handleResponseError()
-        }
+        // TODO
     }
 
     /**
@@ -87,20 +80,14 @@ class MainActivity : AppCompatActivity() {
      * This function serves to display the result of the model
      */
     private fun handleResponseSuccess(output: String) {
-        GlobalScope.launch(Dispatchers.Main) {
-            progressBar.visibility = View.INVISIBLE
-            resultText.text = output
-        } // This uses the main thread to display the result
+        //TODO
     }
 
     /**
      * This function serves to display the some error during the API call
      */
     private fun handleResponseError() {
-        GlobalScope.launch(Dispatchers.Main) {
-            progressBar.visibility = View.INVISIBLE
-            resultText.text = getString(R.string.Error)
-        }
+        //TODO
     }
 
 }
